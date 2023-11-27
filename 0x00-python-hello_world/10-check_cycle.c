@@ -18,7 +18,7 @@ int check_cycle(listint_t *lx)
 		check_1 = check_1->next;
 		check_2 = check_2->next->next;
 
-		if (check_2 == check_1)
+		if (check_1 == check_2)
 			return (1);
 	}
 	return (0);
