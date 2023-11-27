@@ -9,7 +9,7 @@ int check_cycle(listint_t *lx)
 {
 	listint_t *check_1 = NULL, *check_2 = NULL;
 
-	if (lx == NULL)
+	if (!lx)
 		return (0);
 	check_1 = lx;
 	check_2 = lx->next;
