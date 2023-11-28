@@ -5,6 +5,10 @@ state = 0
 if number < 0:
     number = number * -1
     state = 1
+else:
+    number = number * 1
+    state = 0
+
 units = number % 10
 if state == 1:
     number = number * -1
