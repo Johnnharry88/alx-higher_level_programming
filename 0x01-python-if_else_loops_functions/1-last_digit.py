@@ -15,7 +15,7 @@ if state == 1:
     units = units * -1
 print(f"Last digit of {number:d} is {units:d} ", end="")
 if units > 5:
-    print(" and is greater than 5")
+    print("and is greater than 5")
 elif units == 0:
     print("and is 0")
 else:
