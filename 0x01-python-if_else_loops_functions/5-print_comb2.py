@@ -2,4 +2,3 @@
 num = 0
 for num in range(0, 100):
     print("{:02d}".format(num), end=", ")
-    num += 1
