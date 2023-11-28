@@ -2,7 +2,7 @@
 def magic_clacuation(a, b, c):
     if a < b:
         return c
-    elif b < c:
+    if b < c:
         return a + b
     return (a * b) - c
 
