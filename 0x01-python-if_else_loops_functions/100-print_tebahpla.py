@@ -5,7 +5,7 @@ while alx >= 97:
     if alx % 2!= 0:
         alx = alx - 32
         switch = 1
-    print("{:c}".format(alx), end="")
+    print("{:s}".format(chr(alx)), end="")
     if switch == 1:
         alx = alx + 32
     alx = alx - 1
