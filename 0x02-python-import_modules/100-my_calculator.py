@@ -2,13 +2,17 @@
 if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
     import sys
+
     l_args = len(sys.argv)
-    if l_args < 4:
+
+    if l_args != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
+
     a = int(sys.argv[1])
     b = int(sys.argv[3])
     sign = sys.argv[2]
+
     if sign == '-':
         print("{} {} {} = {}".format(a, sign, b, sub(a, b)))
     elif sign == '+':
@@ -17,7 +21,6 @@ if __name__ == "__main__":
         print("{} {} {} = {}".format(a, sign, b, mul(a, b)))
     elif sign == '/':
         print("{} {} {} = {}".format(a, sign, b, div(a, b)))
-
     else:
-    print("Unknown operator. Available operators: +, -, * and /")
-    exit(1)
+        print("Unknown operator. Available operators: +, -, * and /")
+        exit(1)
