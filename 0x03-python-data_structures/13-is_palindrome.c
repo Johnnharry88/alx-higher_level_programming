@@ -8,7 +8,7 @@ listint_t *reverse_listint(listint_t **head)
 {
 	listint_t *ptr_1 = *head;
 	listint_t *nxt;
-	listint_t *foma;
+	listint_t *foma = NULL;
 
 	while(ptr_1)
 	{
