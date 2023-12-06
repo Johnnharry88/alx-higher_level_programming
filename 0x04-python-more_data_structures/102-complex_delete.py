@@ -5,4 +5,4 @@ def complex_delete(a_dictionary, value):
             if y == value:
                 del a_dictionary[x]
                 break
-    return(a_dictionary)
+    return (a_dictionary)
