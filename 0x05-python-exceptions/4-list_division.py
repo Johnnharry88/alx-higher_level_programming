@@ -1,4 +1,4 @@
-#!?usr/bin/python3
+#!/usr/bin/python3
 def list_division(my_list_1, my_list_2, list_length):
     n_list = []
     for alx in range(0, list_length):

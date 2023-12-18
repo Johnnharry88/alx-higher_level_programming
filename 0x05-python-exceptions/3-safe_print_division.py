@@ -5,5 +5,5 @@ def safe_print_division(a, b):
     except (TypeError, ZeroDivisionError):
         ans = None
     finally:
-        print("Invlid result: {}".format(ans))
+        print("Inside result: {}".format(ans))
     return (ans)
