@@ -1,7 +1,16 @@
 #!/usr/bin/python3
+"""CDefining Class Square"""
+
 
 class Square:
+    """Body of class Square"""
+
     def __init__(self, size=0, position=(0, 0)):
+        """Initializes clas Square
+        Size: length of s side of a square
+        Positon: Postion of Square to be defined
+
+        """
         self.size = size
         self.position = position
 
@@ -10,6 +19,12 @@ class Square:
 
     @property
     def size(self):
+        """The property of the lengthofthe side of a square
+        Exception Error:
+        TypeError: if size is not integer
+        ValueError: if size is less than 0
+        """
+
         return self.__size
 
     @size.setter
