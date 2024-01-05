@@ -4,7 +4,7 @@
 
 class Rectangle:
     """Body of class Rechtangle"""
-    def __init__(seld, width=0, height=0):
+    def __init__(self, width=0, height=0):
         """"Initializing the class Rectangle
         Args:
         width: width of th rectangle
@@ -31,7 +31,7 @@ class Rectangle:
         self.__width = value
 
     @property
-    def heigh(self):
+    def height(self):
         """Retrieves attribute of height"""
         return self.__height
 
@@ -41,5 +41,5 @@ class Rectangle:
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
-            raie ValueError("height must be >= 0")
+            raise ValueError("height must be >= 0")
         self.__height = value
