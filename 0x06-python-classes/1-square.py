@@ -2,6 +2,7 @@
 
 """Defines Class Square"""
 
+
 class Square:
     """Body of Class"""
 
