@@ -41,6 +41,11 @@ class Square:
 
     @position.setter
     def position(self, value):
+        """Initializes the position of Square
+        Value: value of tuple of two psotitive integers
+        Exception Error:
+            TypeError: if value is not a tuple or integer in tuple
+        """
         if not isinstance(value, tuple):
             raise TypeError('position must be a tuple of 2 positive integers')
         if len(value) != 2:
@@ -50,9 +55,15 @@ class Square:
         self.__position = value
 
     def area(self):
+        """calculate the area of a Square
+        Returns: vlaue of area Calculated
+        """
+
         return (self.__size ** 2)
 
     def dis_position(self):
+        """Returns the position in space"""
+
         xty = ""
         if self.size == 0:
             return "\n"
