@@ -67,4 +67,6 @@ class Square:
         return xty
 
     def my_print(self):
-        print(self.dis_position(), end="")
+        """Displays the square in position to standard output"""
+
+        `print(self.dis_position(), end="")
