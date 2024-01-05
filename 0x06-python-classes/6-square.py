@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""CDefining Class Square"""
+"""Defining Class Square"""
 
 
 class Square:
@@ -46,12 +46,11 @@ class Square:
         Exception Error:
             TypeError: if value is not a tuple or integer in tuple
         """
-        if not isinstance(value, tuple):
-            raise TypeError('position must be a tuple of 2 positive integers')
-        if len(value) != 2:
-            raise TypeError('postion must be a tuple of 2 positive integers')
-        if len([x for x in value if isinstance(x, int) and x >= 0]) != 2:
-            raise TypeError('position must be a tuple of 2 positive integers')
+        if (not isinstance(value, tuple) or
+                len(value) !=2 or 
+                not all(isinstance(num, int) for num in value) or
+                not all(num >= 0 for num in value)):
+            raise TypeError("position must bea tuple of 2 positive integerss")
         self.__position = value
 
     def area(self):
@@ -59,7 +58,7 @@ class Square:
         Returns: vlaue of area Calculated
         """
 
-        return (self.__size ** 2)
+        return (self.__size ** self.__size)
 
     def dis_position(self):
         """Returns the position in space"""
