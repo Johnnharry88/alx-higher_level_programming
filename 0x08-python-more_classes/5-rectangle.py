@@ -51,7 +51,7 @@ class Rectangle:
 
     def perimeter(self):
         """Calculates and retunrs the perimeter of rectangle"""
-        if slef.__width == 0 or self.__height == 0:
+        if self.__width == 0 or self.__height == 0:
             return (0)
         else:
             return ((self.__width * 2) + (self.__height * 2))
@@ -74,4 +74,4 @@ class Rectangle:
 
     def __del__(self):
         """displays message for deleted objects"""
-        print("Bye rectangle...')
+        print("Bye rectangle...")
