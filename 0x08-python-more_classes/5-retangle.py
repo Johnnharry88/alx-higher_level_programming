@@ -64,10 +64,14 @@ class Rectangle:
         for x in range(self.__height):
             for y in range(self.__width):
                 obj = obj + "#"
-            if y < self.__height - 1:
+            if x < self.__height - 1:
                 obj = obj + "\n"
         return (obj)
 
     def __repr__(self):
         """Retunrs the string representation of rectangle"""
         return "Rectangle({:d}, {:d})".format
+
+    def __del__(self):
+        """displays message for deleted objects"""
+        print("Bye rectangle...')
