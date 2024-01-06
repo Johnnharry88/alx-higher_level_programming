@@ -64,7 +64,7 @@ class Rectangle:
         for x in range(self.__height):
             for y in range(self.__width):
                 obj = obj + "#"
-            if y < self.__height - 1:
+            if x < self.__height - 1:
                 obj = obj + "\n"
         return (obj)
 
