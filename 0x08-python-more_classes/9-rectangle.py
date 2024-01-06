@@ -95,7 +95,11 @@ class Rectangle:
             return rect_1
         else:
             return rect_2
-
+    
     @classmethod
     def square(cls, size=0):
+        """Returns a new rectanglw with smae width and length
+        Argyment:
+            size: size of nteger type of side of square
+        """
         return (Rectangle(size, size))
