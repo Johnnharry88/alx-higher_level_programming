@@ -2,7 +2,7 @@
 """Defines Class zRectangle"""
 
 
-class Rectnagle:
+class Rectangle:
     """Body of class rectsngle"""
     
     def __init__(self, width=0, height=0):
@@ -49,8 +49,8 @@ class Rectnagle:
         x = (self.__width * self.__height)
         return x
 
-    def periemeter(self):
-        """calculates and returns the periemeter of arectangle"""
+    def perimeter(self):
+        """calculates and returns the perimeter of rectangle"""
         if self.__width == 0 or self.__height == 0:
             return (0)
         else:
