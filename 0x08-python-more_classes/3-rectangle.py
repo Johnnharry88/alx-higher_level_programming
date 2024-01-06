@@ -17,7 +17,7 @@ class Rectangle:
         self.width = width
         self.height = height
 
-    @propoerty
+    @property
     def width(self):
         """obtains width atributes"""
         return self.__width
@@ -49,12 +49,13 @@ class Rectangle:
         x = (self.__height * self.__width)
         return x
 
-    def periemeter(self):
+    def perimeter(self):
         """Returns the perimenter of rectangle"""
         if  self.__width == 0 or self.__height == 0:
             return (0)
         else:
             return ((self.__width *2) + (self.__height * 2))
+    
     def __str__(self) -> str:
         """outputs diagram of rectangle defined for an obkject"""
         if self.__width == 0 or self.__height == 0:
@@ -63,6 +64,6 @@ class Rectangle:
         for x in range(self.__height):
             for y in range(self.__width):
                 obj = obj + "#"
-            if x < self._height - 1:
+            if x < self.__height - 1:
                 obj = obj + "\n"
         return (obj)
