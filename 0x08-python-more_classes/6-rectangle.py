@@ -6,7 +6,6 @@ class Rectangle:
     """Body of class Rectangle"""
     number_of_instances = 0
 
-
     def __init__(self, width=0, height=0):
         """Initializing the class rectangle
         Arguments:
@@ -51,7 +50,7 @@ class Rectangle:
     def area(self):
         """Calculates and returns area of rectangle"""
         return (self.__height * self.__width)
-    
+
     def perimeter(self):
         """Calculates and retunrs the perimeter of rectangle"""
         if self.__width == 0 or self.__height == 0:
