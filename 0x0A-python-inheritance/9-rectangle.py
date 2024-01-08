@@ -20,6 +20,6 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         """retruns the string representation of a rectangle"""
-        xty = "[" + str(self.__class__.__name__) + "]"
+        xty = "[" + str(self.__class__.__name__) + "] "
         xty = xty + str(self.__width) + "/" + str(self.__height)
         return xty
