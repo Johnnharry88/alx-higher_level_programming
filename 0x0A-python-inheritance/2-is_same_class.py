@@ -2,7 +2,7 @@
 """Defined method that check the nstance of an object"""
 
 
-def is_name_class(obj,):
+def is_name_class(obj):
     """Checks whetheer an object is instance ot not
     Arguments:
         obj: the object to be checked
