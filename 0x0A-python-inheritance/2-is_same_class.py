@@ -10,7 +10,4 @@ def is_name_class(obj):
     Return:
         Trueni if object is an instance else false
     """
-    if type(obj) == a_class:
-        return True
-    else:
-        return False
+    return (type(obj) == a_class)
