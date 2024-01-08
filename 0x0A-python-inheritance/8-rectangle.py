@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Define a derived Class taking from Base Geometry"""
-BaseGeometry = __import__('7-base_geometry').BaseGeomery
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
