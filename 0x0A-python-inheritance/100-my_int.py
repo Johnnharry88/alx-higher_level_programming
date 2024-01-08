@@ -5,7 +5,7 @@
 class MyInt(int):
     """Initializes int operators == and !="""
     
-    def __equal__(self, value):
+    def __eq__(self, value):
         """Overide == operator != behavior"""
         return self.real != value
 
