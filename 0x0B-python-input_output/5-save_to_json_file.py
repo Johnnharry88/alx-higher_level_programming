@@ -1,4 +1,4 @@
-#!/usr/bin/pythin3
+#!/usr/bin/python3
 """Module contains JAON file-writing function"""
 import json
 
