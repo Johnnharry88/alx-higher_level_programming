@@ -13,7 +13,7 @@ class Student:
     def to_json(self, attrs=None):
         """A dictionary representatio of Student in alist"""
         if attr is not None:
-            xty = {k:self.__dict__[k] for k in self.__dict__.keys() & attr}
+            xty = {k: self.__dict__[k] for k in self.__dict__.keys() & attr}
             return xty
         else:
             return self.__dict__
