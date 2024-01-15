@@ -35,7 +35,7 @@ class Base:
             """Returns list od json representation"""
             j_string = []
             if json_string is not None and json_string != '':
-                if type(json_string) ! = str:
+                if type(json_string) != str:
                     raise TypeError("json_string must be a string")
                 j_string = json.loads(json_string)
             return j_string
@@ -63,12 +63,12 @@ class Base:
                     list_dict = cls.from_json_str(str_rd)
                     for d in list_dict:
                         list_of_inst.append(cls.create(**dictionary))
-            return list_of Inst
+            return list_of_inst
 
         @classmethod
         def create(cls, **dictionary):
             """Returns instance with attributes set"""
-            if cls.__name__ = 'Rectangle':
+            if cls.__name__ == 'Rectangle':
                 alx = cls(1, 1)
             elif cls.__name__ == 'Square':
                 alx = cls(1)
@@ -80,7 +80,7 @@ class Base:
             """Serializes list_objs and saves to file"""
             xty = cls.__name__ + ".csv"
             with open(xty, "w", newline="") as file_csv:
-                if list_objs is None or list_objs = []:
+                if list_objs is None or list_objs == []:
                     file_csv.write("[]")
                 else:
                     if cls.__name__ == "Rectangle":
@@ -101,7 +101,7 @@ class Base:
                     else:
                         parameters = ["id", "size", "x", "y"]
                     list_objs = csv.DictReader(file_csv, fieldnames=parameters)
-                    list_dict =[dict([x, int(y)] for x, y in d.items())
+                    list_objs= [dict([x, int(y)] for x, y in d.items())
                             for d in list_objs]
                     return [cls.ceate(**d) for d in list_objs]
             except IOError:
@@ -135,7 +135,7 @@ class Base:
             for s in list_squares:
                 drw.showturtle()
                 drw.up()
-                drw.goto(sq.x,sq.y)
+                drw.goto(sq.x, sq.y)
                 drw.down()
                 for i in range(2):
                     drw.forward(sq.width)
