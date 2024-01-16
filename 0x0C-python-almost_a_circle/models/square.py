@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Modules contains Class Squarw"""
 
-from models.retangle import Rectangle
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -11,10 +11,10 @@ class Square(Rectangle):
         self.x = x
         self.y = y
         self.id = None
-        super()__init__(size, size, x, y, id)
+        super().__init__(size, size, x, y, id)
 
     @property
-    def size)self):
+    def size(self):
         """sets the value of size"""
         return self.__width
 
@@ -28,8 +28,8 @@ class Square(Rectangle):
         self.__height = value
 
     def __str__(self):
-        """Defines sring represntation oft class"""
-        return f"[Square] ({self.id]) {self.x}/{self.y} - {self.size}"
+        """Defines sring represntation of class"""
+        return f"[Square] ({self.id}) {self.__x}/{self.__y} - {self.size}"
 
     def update(self, *args, **n_args):
         """Sets Arguments of an instance"""
