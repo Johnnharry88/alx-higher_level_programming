@@ -128,7 +128,7 @@ class Rectangle(Base):
 
     def to_dictionaty(self):
         """Returns dictionary representation of a rectangle"""
-        o_d = {"id": self.id, "width": self.__width,
-               "height": self.__height, "x": self.__x,
-               "y": self.__y}
+        o_d = {'id': self.id, 'width': self.__width,
+                'height': self.__height, 'x': self.__x,
+               'y': self.__y}
         return o_d
