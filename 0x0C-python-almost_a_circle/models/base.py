@@ -33,10 +33,10 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """Returns list od json representation"""
-        j_string = []
-        if json_string is not None and json_string != '':
+        if json_string is not None and json_string != "[]":
             if type(json_string) != str:
                 raise TypeError("json_string must be a string")
+            return []
             j_string = json.loads(json_string)
         return j_string
 
