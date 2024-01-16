@@ -21,14 +21,14 @@ class Base:
             self.id = Base.__nb_objects
 
         @staticmethod
-        def to_json_str(list_dic):
+        def to_json_string(list_dictionaries):
             """return the string representation of list dictionaries"""
-            if list_dic is [] or list_dic is None:
+            if list_dictionaries is [] or list_dictionaries is None:
                 return "[]"
-            if (type(list_dic) != list or not
-                    all(type(x) == dict for x in list_dic)):
+            if (type(list_dictionaries) != list or not
+                    all(type(x) == dict for x in list_dictionaries)):
                 raise TypeError("list_dic must be a list of dictionaries")
-            return json.dumps(list_dic)
+            return json.dumps(list_dictionaries)
 
         @staticmethod
         def from_json_str(json_string):
@@ -49,7 +49,7 @@ class Base:
                     j.write("[}")
                 else:
                     list_dict = [x.to_dixtionary() for x in list_objs]
-                    j.write(Base.to_json_str(list_dict))
+                    j.write(Base.to_json_string(list_dict))
 
         @classmethod
         def load_from_file(cls):
