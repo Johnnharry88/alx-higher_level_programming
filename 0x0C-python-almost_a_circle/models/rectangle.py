@@ -28,13 +28,13 @@ class Rectangle(Base):
     @property
     def x(self):
         """Obtains the value x"""
-         return self.__x
+        return self.__x
 
     @property
     def y(self):
         """Obtains value for y"""
         return self.__y
-        
+
     @width.setter
     def width(self, value):
         """Sets the valus for width"""
@@ -77,23 +77,23 @@ class Rectangle(Base):
 
     def display(self):
         """Displays rectangle using # sign """
-        for y in range (self.y):
+        for y in range(self.y):
             print("")
-        for r in range (self.__height):
+        for r in range(self.__height):
             for x in range(self.x):
-                print( " ", end="")
-            for c in range (self.__width):
+                print(" ", end="")
+            for c in range(self.__width):
                 print("#", end="")
             print()
 
     def __str__(self):
         """Defines the string representation of class"""
-        return f"[Rectangle] ({self.id}) {self.__x}\{self.__y} - \
-{self.__width}/{self.__height}"
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - \
+ {self.__width}/{self.__height}"
 
     def update(self, *args, **n_args):
         """Assigns argumentt to each attribte"""
-        if args and len(args) ! = 0:
+        if args and len(args) != 0:
             x = 0
             for ag in args:
                 if x == 0:
@@ -110,24 +110,25 @@ class Rectangle(Base):
                 elif a == 4:
                     self.y = arg
                 a = a + 1
-        elif n_args and len(n_args) ! = ):
+        elif n_args and len(n_args) != 0:
             for x, y in n_args.items():
                 if x == "id":
                     if y is None:
-                        self.__init(self.width, self.height, self.x, self.y)
+                        self.__init__(self.width, self.height, self.x, self.y)
                     else:
                         self.id = y
                 elif x == "width":
                     self.width = y
-                elif x =="height":
+                elif x == "height":
                     self.height = y
                 elif x == "x":
                     self.x = y
-                elif x =="y":
+                elif x == "y":
                     self.y = y
 
     def to_dictionaty(self):
         """Returns dictionary representation of a rectangle"""
-        obj_dict = {"id": self.id, "width": self.__width, "height": slef.__height, "x": self.__x, "y": self.__y}
-        return obj_dict
-
+        o_d = {"id": self.id, "width": self.__width,
+               "height": self.__height, "x": self.__x,
+               "y": self.__y}
+        return o_d
