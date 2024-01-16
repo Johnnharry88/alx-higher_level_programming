@@ -20,36 +20,36 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
-        @staticmethod
-        def to_json_string(list_dictionaries):
-            """return the string representation of list dictionaries"""
-            if list_dictionaries == [] or list_dictionaries is None:
-                return "[]"
-            if (type(list_dictionaries) != list or not
-                    all(type(x) == dict for x in list_dictionaries)):
-                raise TypeError("list_dictionaries must be a list of dictionaries")
-            return json.dumps(list_dictionaries)
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """return the string representation of list dictionaries"""
+        if list_dictionaries == [] or list_dictionaries is None:
+            return "[]"
+        if (type(list_dictionaries) != list or not
+                all(type(x) == dict for x in list_dictionaries)):
+            raise TypeError("list_dictionaries must be a list of dictionaries")
+        return json.dumps(list_dictionaries)
 
-        @staticmethod
-        def from_json_string(json_string):
-            """Returns list od json representation"""
-            j_string = []
-            if json_string is not None and json_string != '':
-                if type(json_string) != str:
-                    raise TypeError("json_string must be a string")
-                j_string = json.loads(json_string)
-            return j_string
+    @staticmethod
+    def from_json_string(json_string):
+        """Returns list od json representation"""
+        j_string = []
+        if json_string is not None and json_string != '':
+            if type(json_string) != str:
+                raise TypeError("json_string must be a string")
+            j_string = json.loads(json_string)
+        return j_string
 
-        @classmethod
-        def save_to_file(cls, list_objs):
-            """saves json objects to file"""
-            xty = cls.__name__ + ".json"
-            with open(xty, 'w') as j:
-                if list_objs is None:
-                    j.write("[}")
-                else:
-                    list_dict = [x.to_dictionary() for x in list_objs]
-                    j.write(Base.to_json_string(list_dict))
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """saves json objects to file"""
+        xty = cls.__name__ + ".json"
+        with open(xty, 'w') as j:
+            if list_objs is None:
+                j.write("[]")
+            else:
+                list_dict = [x.to_dictionary() for x in list_objs]
+                j.write(Base.to_json_string(list_dict))
 
         @classmethod
         def load_from_file(cls):
