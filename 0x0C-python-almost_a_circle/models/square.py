@@ -32,7 +32,7 @@ class Square(Rectangle):
         """Defines sring represntation of class"""
         return f"[Square] ({self.id}) {self.__x}/{self.__y} - {self.size}"
 
-    def update(self, *args, **n_args):
+    def update(self, *args, **kwargs):
         """Sets Arguments of an instance"""
         if args is not None and len(args) != 0:
             if len(args) >= 1:
@@ -46,10 +46,10 @@ class Square(Rectangle):
             if len(args) > 3:
                 self.y = args[3]
         else:
-            for x, y in n_args.items():
+            for x, y in kwargs.items():
                 if x == "id":
                     if type(y) != int and y is not None:
-                        raise TypeError("ide must be an intgeer")
+                        raise TypeError("id must be an intger")
                     self.id = y
                 if x == "size":
                     self.size = y

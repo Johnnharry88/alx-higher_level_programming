@@ -27,11 +27,11 @@ class Base:
                 return "[]"
             if (type(list_dictionaries) != list or not
                     all(type(x) == dict for x in list_dictionaries)):
-                raise TypeError("list_dic must be a list of dictionaries")
+                raise TypeError("list_dictionaries must be a list of dictionaries")
             return json.dumps(list_dictionaries)
 
         @staticmethod
-        def from_json_str(json_string):
+        def from_json_string(json_string):
             """Returns list od json representation"""
             j_string = []
             if json_string is not None and json_string != '':
