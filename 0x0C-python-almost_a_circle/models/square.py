@@ -18,6 +18,7 @@ class Square(Rectangle):
         """sets the value of size"""
         return self.__width
 
+    @size.setter
     def size(self, value):
         """sets the square value"""
         if (type(value) is not int):
