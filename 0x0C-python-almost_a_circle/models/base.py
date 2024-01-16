@@ -23,7 +23,7 @@ class Base:
         @staticmethod
         def to_json_string(list_dictionaries):
             """return the string representation of list dictionaries"""
-            if list_dictionaries is [] or list_dictionaries is None:
+            if list_dictionaries == [] or list_dictionaries is None:
                 return "[]"
             if (type(list_dictionaries) != list or not
                     all(type(x) == dict for x in list_dictionaries)):
@@ -48,7 +48,7 @@ class Base:
                 if list_objs is None:
                     j.write("[}")
                 else:
-                    list_dict = [x.to_dixtionary() for x in list_objs]
+                    list_dict = [x.to_dictionary() for x in list_objs]
                     j.write(Base.to_json_string(list_dict))
 
         @classmethod
