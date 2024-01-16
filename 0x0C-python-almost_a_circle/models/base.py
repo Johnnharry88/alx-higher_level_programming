@@ -25,9 +25,6 @@ class Base:
         """return the string representation of list dictionaries"""
         if list_dictionaries == [] or list_dictionaries is None:
             return "[]"
-        if (type(list_dictionaries) != list or not
-                all(type(x) == dict for x in list_dictionaries)):
-            raise TypeError("list_dictionaries must be a list of dictionaries")
         return json.dumps(list_dictionaries)
 
     @staticmethod
