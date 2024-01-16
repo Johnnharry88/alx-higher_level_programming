@@ -19,16 +19,16 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-        
+
         @staticmethod
-        def to_json_str(list_dictionaries):
+        def to_json_str(list_dic):
             """return the string representation of list dictionaries"""
-            if list_dictionaries is [] or list_dictionaries is None:
+            if list_dic is [] or list_dic is None:
                 return "[]"
-            if (type(list_dictionaries) != list or not
-                    all(type(x) == dict for x in list_dictionaries)):
-                raise TypeError("list_dictionaries must be a list of dictionaries")
-            return json.dumps(list_dictionaires)
+            if (type(list_dic) != list or not
+                    all(type(x) == dict for x in list_dic)):
+                raise TypeError("list_dic must be a list of dictionaries")
+            return json.dumps(list_dic)
 
         @staticmethod
         def from_json_str(json_string):
@@ -74,7 +74,7 @@ class Base:
                 alx = cls(1)
             alx.update(**dictionary)
             return alx
-        
+
         @classmethod
         def save_to_file_csv(cls, list_objs):
             """Serializes list_objs and saves to file"""
@@ -88,7 +88,7 @@ class Base:
                     else:
                         parameters = ["id", "size", "x", "y"]
                     writter = csv.DictWriter(file_csv, fieldnames=parameters)
-                    for l in list_objs:
+                    for x in list_objs:
                         writter.writerow(obj.to_dictionary())
 
         def load_from_file_csv(cls):
@@ -101,8 +101,8 @@ class Base:
                     else:
                         parameters = ["id", "size", "x", "y"]
                     list_objs = csv.DictReader(file_csv, fieldnames=parameters)
-                    list_objs= [dict([x, int(y)] for x, y in d.items())
-                            for d in list_objs]
+                    list_objs = [dict([x, int(y)] for x, y in d.items())
+                                 for d in list_objs]
                     return [cls.ceate(**d) for d in list_objs]
             except IOError:
                 return []
@@ -130,7 +130,7 @@ class Base:
                     drw.forward(rect.height)
                     drw.left(90)
                 drw.hideturtle()
-            
+
             drw.color("#c5e3d8")
             for s in list_squares:
                 drw.showturtle()
