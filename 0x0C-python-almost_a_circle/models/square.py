@@ -49,7 +49,7 @@ class Square(Rectangle):
             for x, y in n_args.items():
                 if x == "id":
                     if type(y) != int and y is not None:
-                        raise TypeError("ide must be an inteer")
+                        raise TypeError("ide must be an intgeer")
                     self.id = y
                 if x == "size":
                     self.size = y
