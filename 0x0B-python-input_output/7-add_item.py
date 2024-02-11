@@ -8,10 +8,10 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 filename = 'add_items.json'
 
 try:
-    json_list = load_from_json(filename)
+    json_list = load_from_json_file(filename)
 except:
-    json_list =[]
-    for x inargv[1:]:
+    json_list = []
+    for x in argv[1:]:
         json_list.append(x)
 
-    save_to_json_file(my_list, filename)
+    save_to_json_file(json_list, filename)
