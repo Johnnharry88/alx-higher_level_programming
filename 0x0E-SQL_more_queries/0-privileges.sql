@@ -1,0 +1,4 @@
+-- List the privilleges of the MySQl  stipulated users
+
+SHOW GRANTS FOR user_0d_1@localhost;
+SHOW GRANTS FOR user_0d_2@localhost;
