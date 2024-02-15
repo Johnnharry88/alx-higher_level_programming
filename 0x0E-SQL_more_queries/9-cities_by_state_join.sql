@@ -1,7 +1,7 @@
 --Lists all cities found in database 
 
-select c.'id', c.'name', s.'name'
-from 'cities' as c 
-inner join 'states' as s
-on c.'state_id'= s.'id'
-order by c.'id';
+SELECT c.'id', c.'name', s.'name'
+FROM 'cities' as c 
+INNER JOIN 'states' AS s
+ON c.'state_id'= s.'id'
+ORDER BY c.'id';
