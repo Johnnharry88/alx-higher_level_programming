@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 # lists all state from the tatabase htn_0e_0_usa
+# Usage: ./0-select_states.py <nysql username> \
+#                             <mysql password> \
+#                             <database name>
 import sys
 import MySQLdb
 if __name__ == '__main__':
