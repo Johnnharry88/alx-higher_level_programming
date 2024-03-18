@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""lists all cities in states rdered by the cities id""" 
+"""lists all cities in states rdered by the cities id"""
 import sys
 import MySQLdb
 
