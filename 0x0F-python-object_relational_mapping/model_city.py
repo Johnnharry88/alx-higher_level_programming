@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Defines a City model and links to the databse
+"""Defines a City model and links to the databse"""
 
 from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
