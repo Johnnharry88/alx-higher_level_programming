@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ finds a peak in a list of unsored integers"""
 
+
 def find_peak(list_of_integers):
     """Returns Peak of list_of _integers)"""
     x = len(list_of_integers)
