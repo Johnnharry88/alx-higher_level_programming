@@ -5,7 +5,7 @@ import requests
 
 
 if __name__ == "__main__":
-    alx = "https://api.github.com/repo/{}/{}/commits".fomrat(
+    alx = "https://api.github.com/repos/{}/{}/commits".fomrat(
         sys.argv[2], sys.argv[1])
 
     alx_r = requests.get(alx)
