@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Sends a POST request to http://0.0.0.0:5000/search_user with a given letter
+Usage: ./8-json_api.py <letter>
 """
 import sys
 import requests
@@ -15,6 +16,6 @@ if __name__ == "__main__":
         if res == {}:
             print("No result")
         else:
-            print("[{}] {}".format(res.get("id"), res.get("name"0)))
+            print("[{}] {}".format(res.get("id"), res.get("name")))
     except ValueError:
         print("Not a vlaid JSON")
