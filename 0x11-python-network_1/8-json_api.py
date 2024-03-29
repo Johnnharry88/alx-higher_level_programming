@@ -18,4 +18,4 @@ if __name__ == "__main__":
         else:
             print("[{}] {}".format(res.get("id"), res.get("name")))
     except ValueError:
-        print("Not a vlaid JSON")
+        print("Not a valid JSON")
