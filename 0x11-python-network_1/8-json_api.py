@@ -6,7 +6,7 @@ import requests
 
 
 if __name__ == "__main__":
-    search = "" if len(sys.argv) ==  1 else sys.argv[1]
+    search = "" if len(sys.argv) == 1 else sys.argv[1]
     load = {"q": search}
 
     alx_r = requests.post("http://0.0.0.0:5000/search_user", data=load)

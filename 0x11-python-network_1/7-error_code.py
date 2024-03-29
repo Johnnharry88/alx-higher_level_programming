@@ -7,6 +7,7 @@ import requests
 
 if __name__ == "__main__":
     alx = sys.argv[1]
+
     alx_r = requests.get(alx)
     if alx_r.status_code >= 400:
         print("Error code: {}".format(alx_r.status_code))
