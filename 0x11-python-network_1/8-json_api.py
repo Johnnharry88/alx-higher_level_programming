@@ -7,9 +7,9 @@ import requests
 
 if __name__ == "__main__":
     search = "" if len(sys.argv) == 1 else sys.argv[1]
-    load = {"q": search}
+    payload = {"q": search}
 
-    alx_r = requests.post("http://0.0.0.0:5000/search_user", data=load)
+    alx_r = requests.post("http://0.0.0.0:5000/search_user", data=payload)
     try:
         res = alx_r.json()
         if res == {}:
