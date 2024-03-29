@@ -8,5 +8,5 @@ import requests
 if __name__ == "__main__":
     alx = sys.argv[1]
 
-    alx_r = request. get(alx)
+    alx_r = requests.get(alx)
     print(alx_r.headers.get("X-Request-Id"))
