@@ -2,7 +2,7 @@
 
 const request = require('request');
 const url = process.argv[2];
-const idxter = '10';
+const idxter = '18';
 let rec = 0;
 
 request.get(url, (error, response, body) => {
