@@ -1,3 +1,3 @@
-document.readyState(function () {
-  $('header').css('color', '#FF0000');
-});
+const $hdfile = #('header');
+
+Shdfile.css('color', '#FF0000');
